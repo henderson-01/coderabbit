@@ -1,0 +1,41 @@
+# .coderabbit.yaml (In your global 'coderabbit' repository)
+language: en-US
+
+reviews:
+  profile: chill
+  poem: false
+  
+  # Global filters: These apply to ALL languages (ignoring build folders)
+  path_filters:
+    - "!**/uv.lock"         
+    - "!**/.venv/**"        
+    - "!**/.ruff_cache/**"  
+    - "!dist/**"
+    - "!build/**"
+    - "!node_modules/**"    # Good to have if you ever add JavaScript/HTML
+
+  # Global rules: Universal advice for ANY language (Python, Bash, HTML, etc.)
+  instructions: |
+    - Act as a supportive Senior Developer mentoring a Junior.
+    - Focus on logic, security, and edge cases.
+    - Briefly explain the *why* behind any performance or security suggestions so I can learn.
+    - Do not nitpick stylistic choices or whitespace.
+
+  path_instructions:
+    # 🐍 PYTHON SPECIFIC RULES
+    - path: "**/*.py"
+      instructions: |
+        - We use Ruff for linting and formatting. NEVER comment on formatting, unused imports, or basic syntax errors.
+        - Ensure public functions have clear PEP 484 type hints.
+        - Check that context managers (`with` statements) are used for resource management.
+        - Encourage defensive programming (e.g., checking for `None` or out-of-bounds inputs).
+    
+    - path: "pyproject.toml"
+      instructions: |
+        - Verify that dependency definitions are clean and organized for `uv`.
+
+    # 🐚 BASH SPECIFIC RULES (Example of how you can scale it later)
+    - path: "**/*.sh"
+      instructions: |
+        - Ensure bash scripts use `set -euo pipefail` for safety.
+        - Suggest modern Bash practices over outdated POSIX conventions where applicable.
