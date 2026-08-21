@@ -8,3 +8,5 @@ The `.coderabbit.yaml` file in this repository acts as the central source of tru
 - Defers to `ruff` and `uv` for all formatting, linting, and dependency management.
 
 By keeping this configuration here, CodeRabbit automatically inherits these rules across all my repositories without needing to duplicate the YAML file in every project.
+
+*Note: This is a personal CodeRabbit configuration repository and is not accepting external contributions.*
