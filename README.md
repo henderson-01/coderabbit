@@ -1,6 +1,6 @@
 # Global CodeRabbit Configuration
 
-This repository contains the global configuration for [CodeRabbit](https://coderabbit.ai/), an AI-powered code review tool. 
+This repository contains the my global configuration for [CodeRabbit](https://coderabbit.ai/), an AI-powered code review tool. 
 
 The `.coderabbit.yaml` file in this repository acts as the central source of truth for all my open-source projects. It ensures that the AI:
 - Acts as a supportive Python mentor.
